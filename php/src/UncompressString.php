@@ -24,5 +24,5 @@ public function uncompress (string $str): string {
 }
 }
 
-$uncompress = new UncompressString();
-print_r($uncompress->uncompress("2a5b1c"));
+//$uncompress = new UncompressString();
+//print_r($uncompress->uncompress("2a5b1c"));
