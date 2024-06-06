@@ -20,3 +20,14 @@ or run: `./tools/phpunit.phar --testsuite unit` to test everything
 Each file has a test written in go. Tests in go are in files ending with `_test.go`
 
 to test run: `go test` in the folder of the file you want to test
+
+
+# Big O Notation Notes
+
+better                                                           worse
+
+<---------------------------------------------------------------->
+
+O(1)      O(log(n))    O(n)      O(n^c)      O(c^n)        O(n!)
+
+constant  logarithmic  linear    polynomial  exponential   factorial
