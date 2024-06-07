@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"example.com/dynamic"
 	"example.com/recursive"
+	"example.com/linkedlist"
 )
 
 func main() {
@@ -20,4 +21,15 @@ func main() {
 	fmt.Println(recursive.Palindrome("racecar"))
 
 	fmt.Println(recursive.Fibonacci(6))
+
+	a := linkedlist.Node{Value: "a"}
+	b := linkedlist.Node{Value: "b"}
+	c := linkedlist.Node{Value: "c"}
+	d := linkedlist.Node{Value: "d"}
+
+	a.Next = &b
+	b.Next = &c
+	c.Next = &d
+
+	fmt.Println(linkedlist.LinkedListValues(&a))
 }
