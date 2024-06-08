@@ -32,4 +32,19 @@ func main() {
 	c.Next = &d
 
 	fmt.Println(linkedlist.LinkedListValues(&a))
+
+	fmt.Println(linkedlist.LinkedListFind(&a, "c"))
+
+	one := linkedlist.IntNode{Value: 2}
+	two := linkedlist.IntNode{Value: 8}
+	three := linkedlist.IntNode{Value: 3}
+	four := linkedlist.IntNode{Value: -1}
+	five := linkedlist.IntNode{Value: 7}
+
+	one.Next = &two
+	two.Next = &three
+	three.Next = &four
+	four.Next = &five
+
+	fmt.Println(linkedlist.LinkedListSum(&one))
 }

@@ -5,6 +5,11 @@ type Node struct {
 	Next  *Node
 }
 
+type IntNode struct {
+	Value int
+	Next  *IntNode
+}
+
 type LinkedList struct {
 	Head *Node
 }
