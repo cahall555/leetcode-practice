@@ -14,3 +14,4 @@ func fillValues(head *Node, values *[]string) {
 	*values = append(*values, head.Value)
 	fillValues(head.Next, values)
 }
+
