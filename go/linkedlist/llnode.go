@@ -15,9 +15,12 @@ type LinkedList struct {
 }
 
 //Print values of reversed linked list
-func PrintLinkedList(head *Node) {
-	for head != nil {
-		print(head.Value, " ")
-		head = head.Next
+func PrintLinkedList(head *Node) string {
+	result := ""
+	current := head
+	for current != nil {
+		result += current.Value + " "
+		current = current.Next
 	}
+	return result
 }
