@@ -48,8 +48,7 @@ func main() {
 
 	fmt.Println(linkedlist.LinkedListSum(&one))
 	
-	linkedlist.PrintLinkedList(linkedlist.LinkedListReverse(&a))
-	println("")
+	println(linkedlist.PrintLinkedList(linkedlist.LinkedListReverse(&a)))
 
 	e := linkedlist.Node{Value: "e"}
 	f := linkedlist.Node{Value: "f"}
@@ -59,9 +58,8 @@ func main() {
 	e.Next = &f
 	f.Next = &g
 	g.Next = &h
-	linkedlist.PrintLinkedList(linkedlist.LinkedListItReverse(&e))
+	println(linkedlist.PrintLinkedList(linkedlist.LinkedListItReverse(&e)))
 	
-	println("")
 	head1 := &linkedlist.Node{Value: "1"}
 	head1.Next = &linkedlist.Node{Value: "3"}
 	head1.Next.Next = &linkedlist.Node{Value: "5"}
@@ -71,11 +69,39 @@ func main() {
 	head2.Next.Next = &linkedlist.Node{Value: "6"}
 	
 	newHead := linkedlist.LinkedListRecZipper(head1, head2)
-	linkedlist.PrintLinkedList(newHead)
+	println(linkedlist.PrintLinkedList(newHead))
 
 
 //	itNewHead := linkedlist.LinkedListItZipper(head1, head2)
-//	linkedlist.PrintLinkedList(itNewHead)
+//	println(linkedlist.PrintLinkedList(itNewHead))
+
+	lshead := &linkedlist.IntNode{Value: 1}
+	lshead.Next = &linkedlist.IntNode{Value: 1}
+	lshead.Next.Next = &linkedlist.IntNode{Value: 2}
+	lshead.Next.Next.Next = &linkedlist.IntNode{Value: 3}
+	lshead.Next.Next.Next.Next = &linkedlist.IntNode{Value: 3}
+	lshead.Next.Next.Next.Next.Next = &linkedlist.IntNode{Value: 3}
+
+	println(linkedlist.LongestStreak(lshead))
+
+	remove := &linkedlist.Node{Value: "a"}
+	remove.Next = &linkedlist.Node{Value: "b"}
+	remove.Next.Next = &linkedlist.Node{Value: "c"}
+	remove.Next.Next.Next = &linkedlist.Node{Value: "d"}
+	remove.Next.Next.Next.Next = &linkedlist.Node{Value: "c"}
+	remove.Next.Next.Next.Next.Next = &linkedlist.Node{Value: "e"}
+
+	println(linkedlist.PrintLinkedList(linkedlist.RemoveNodeRec(remove, "c")))
+//	println(linkedlist.PrintLinkedList(linkedlist.RemoveNodeIt(remove, "c")))
+
+        insert := &linkedlist.Node{Value: "a"}
+	insert.Next = &linkedlist.Node{Value: "b"}
+	insert.Next.Next = &linkedlist.Node{Value: "d"}
+	insert.Next.Next.Next = &linkedlist.Node{Value: "e"}
+
+//	println(linkedlist.PrintLinkedList(linkedlist.InsertNodeRec(insert, "c", 2, 0)))
+	println(linkedlist.PrintLinkedList(linkedlist.InsertNodeIt(insert, "c", 2)))
+
 }
 
 
