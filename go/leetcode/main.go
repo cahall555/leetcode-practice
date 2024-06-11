@@ -102,6 +102,21 @@ func main() {
 //	println(linkedlist.PrintLinkedList(linkedlist.InsertNodeRec(insert, "c", 2, 0)))
 	println(linkedlist.PrintLinkedList(linkedlist.InsertNodeIt(insert, "c", 2)))
 
+	values := []string{"h", "i", "j", "k", "l"}
+//	println(linkedlist.PrintLinkedList(linkedlist.CreateLinkedListRec(values, 0)))
+	println(linkedlist.PrintLinkedList(linkedlist.CreateLinkedListIt(values)))
+
+	addA := &linkedlist.IntNode{Value: 7}
+	addA.Next = &linkedlist.IntNode{Value: 1}
+	addA.Next.Next = &linkedlist.IntNode{Value: 6}
+
+	addB := &linkedlist.IntNode{Value: 5}
+	addB.Next = &linkedlist.IntNode{Value: 9}
+	addB.Next.Next = &linkedlist.IntNode{Value: 2}
+	addB.Next.Next.Next = &linkedlist.IntNode{Value: 3}
+
+//	fmt.Println(linkedlist.PrintIntLinkedList(linkedlist.AddListsRec(addA, addB, 0)))
+	fmt.Println(linkedlist.PrintIntLinkedList(linkedlist.AddListsIt(addA, addB)))
 }
 
 
