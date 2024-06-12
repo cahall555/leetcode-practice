@@ -5,6 +5,7 @@ import (
 	"example.com/dynamic"
 	"example.com/recursive"
 	"example.com/linkedlist"
+	"example.com/binarytree"
 )
 
 func main() {
@@ -117,6 +118,16 @@ func main() {
 
 //	fmt.Println(linkedlist.PrintIntLinkedList(linkedlist.AddListsRec(addA, addB, 0)))
 	fmt.Println(linkedlist.PrintIntLinkedList(linkedlist.AddListsIt(addA, addB)))
+
+	root := &binarytree.BTNode{Value: "a"}
+	root.Left = &binarytree.BTNode{Value: "b"}
+	root.Right = &binarytree.BTNode{Value: "c"}
+	root.Left.Left = &binarytree.BTNode{Value: "d"}
+	root.Left.Right = &binarytree.BTNode{Value: "e"}
+	root.Right.Left = &binarytree.BTNode{Value: "f"}
+	
+//	fmt.Println(binarytree.DepthFirstRec(root))
+	fmt.Println(binarytree.DepthFirstIt(root))
 }
 
 
