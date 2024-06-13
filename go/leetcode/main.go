@@ -128,6 +128,10 @@ func main() {
 	
 //	fmt.Println(binarytree.DepthFirstRec(root))
 	fmt.Println(binarytree.DepthFirstIt(root))
+
+	fmt.Println(binarytree.BreadthFirst(root))
+
+	fmt.Println(binarytree.TreeLevelsRec(root))
 }
 
 
