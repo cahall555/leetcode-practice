@@ -2,8 +2,6 @@ package binarytree
 
 //Using stack methodology to traverse binary tree.
 
-
-
 //DepthFirstRec is a recursive function that traverses a binary tree in depth-first order.
 //Time complexity is O(n^2)
 //Space complexity is O(n)
@@ -41,3 +39,36 @@ func DepthFirstIt(root *BTNode) []string {
 	return result
 }
 
+
+//           a
+//         /   \
+//       b       c
+//      / \     / \
+//     d   e   f   g
+//    / \
+//   h   i
+
+
+// DepthFirstRec(a) => [a b d h i e c f g]
+
+// itteraion 1:
+// current := stack[len(stack)-1] => a
+// stack = stack[:len(stack)-1] => []
+// result = append(result, a) => [a]
+// stack = append(stack, c) => [c]
+// stack = append(stack, b) => [c b]
+
+// itteraion 2:
+// current := stack[len(stack)-1] => b
+// stack = stack[:len(stack)-1] => [c]
+// result = append(result, b) => [a b]
+// stack = append(stack, e) => [c e]
+// stack = append(stack, d) => [c e d]
+
+// itteraion 3:
+// current := stack[len(stack)-1] => d
+// stack = stack[:len(stack)-1] => [c e]
+// result = append(result, d) => [a b d]
+// stack = append(stack, i) => [c e i]
+// stack = append(stack, h) => [c e i h]
+//...
