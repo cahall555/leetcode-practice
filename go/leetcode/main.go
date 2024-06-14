@@ -119,10 +119,10 @@ func main() {
 //	fmt.Println(linkedlist.PrintIntLinkedList(linkedlist.AddListsRec(addA, addB, 0)))
 	fmt.Println(linkedlist.PrintIntLinkedList(linkedlist.AddListsIt(addA, addB)))
 
-	root := &binarytree.BTNode{Value: "a"}
-	root.Left = &binarytree.BTNode{Value: "b"}
+	root := &binarytree.BTNode{Value: "a"}                // a
+	root.Left = &binarytree.BTNode{Value: "b"}	     // b   c
 	root.Right = &binarytree.BTNode{Value: "c"}
-	root.Left.Left = &binarytree.BTNode{Value: "d"}
+	root.Left.Left = &binarytree.BTNode{Value: "d"}       // d e f
 	root.Left.Right = &binarytree.BTNode{Value: "e"}
 	root.Right.Left = &binarytree.BTNode{Value: "f"}
 	
@@ -132,6 +132,16 @@ func main() {
 	fmt.Println(binarytree.BreadthFirst(root))
 
 	fmt.Println(binarytree.TreeLevelsRec(root))
+
+	intRoot := &binarytree.BTIntNode{Value: 1}                // 1
+	intRoot.Left = &binarytree.BTIntNode{Value: 2}	     // 2   3
+	intRoot.Right = &binarytree.BTIntNode{Value: 3}
+	intRoot.Left.Left = &binarytree.BTIntNode{Value: 4}       // 4 5 6 7
+	intRoot.Left.Right = &binarytree.BTIntNode{Value: 5}
+	intRoot.Right.Left = &binarytree.BTIntNode{Value: 6}
+	intRoot.Right.Right = &binarytree.BTIntNode{Value: 7}
+
+	fmt.Println(binarytree.Cousins(intRoot, 4, 6))
 }
 
 
