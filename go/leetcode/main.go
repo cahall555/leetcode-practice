@@ -142,6 +142,12 @@ func main() {
 	intRoot.Right.Right = &binarytree.BTIntNode{Value: 7}
 
 	fmt.Println(binarytree.Cousins(intRoot, 4, 6))
+
+	fmt.Println(binarytree.LeafListRec(root))
+
+	fmt.Println(binarytree.LeafListIt(root))
+
+	fmt.Println(binarytree.PathFinder(root, "d"))
 }
 
 
