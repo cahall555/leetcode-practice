@@ -6,6 +6,7 @@ import (
 	"example.com/recursive"
 	"example.com/linkedlist"
 	"example.com/binarytree"
+	"example.com/graph"
 )
 
 func main() {
@@ -148,6 +149,19 @@ func main() {
 	fmt.Println(binarytree.LeafListIt(root))
 
 	fmt.Println(binarytree.PathFinder(root, "d"))
+
+	var graphMap = map[string][]string{ //Acylic ajacency list
+		"a": []string{"b", "c"},  // a -> b -> d -> f -> h
+		"b": []string{"d"},        //|
+		"c": []string{"e"},        //v
+		"d": []string{"f"},        //c -> e -> g
+		"e": []string{"g"},
+		"f": []string{"h"},
+	}
+
+//	fmt.Println(graph.HasPathRec(&graphMap, "a", "h"))
+
+	fmt.Println(graph.HasPathIt(&graphMap, "a", "h"))
 }
 
 
