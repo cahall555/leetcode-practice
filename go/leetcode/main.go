@@ -162,6 +162,16 @@ func main() {
 //	fmt.Println(graph.HasPathRec(&graphMap, "a", "h"))
 
 	fmt.Println(graph.HasPathIt(&graphMap, "a", "h"))
+
+
+	var edges = [][]string{
+		{"i", "j"},
+		{"k", "i"},
+		{"m", "k"},
+		{"k", "l"},
+	}
+
+	fmt.Println(graph.UndirectedPath(edges, "i", "l"))
 }
 
 
