@@ -48,4 +48,6 @@ var graphMap = map[string][]string{ //Acylic ajacency list
 	fmt.Println(graph.ConnectedComponentCount(&connected))
 
 	fmt.Println(graph.ConnectedComponentCountSet(&connected))
+
+	fmt.Println(graph.KnightAttack(8, 1, 1, 2, 2))
 }
