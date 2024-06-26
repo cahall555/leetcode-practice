@@ -50,4 +50,16 @@ var graphMap = map[string][]string{ //Acylic ajacency list
 	fmt.Println(graph.ConnectedComponentCountSet(&connected))
 
 	fmt.Println(graph.KnightAttack(8, 1, 1, 2, 2))
+
+	println("Best Bridge")
+	var grid = [][]string{
+		{"W", "W", "W", "L", "L"},
+		{"L", "L", "W", "W", "L"},
+		{"W", "L", "W", "W", "W"},
+		{"W", "W", "W", "W", "W"},
+		{"W", "W", "W", "W", "W"},
+	}
+
+	fmt.Println(graph.BestBridge(grid))
+
 }
