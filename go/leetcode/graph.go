@@ -62,4 +62,20 @@ var graphMap = map[string][]string{ //Acylic ajacency list
 
 	fmt.Println(graph.BestBridge(grid))
 
+	println("Closest Carrot")
+	var carrotGrid = [][]string{
+		{"O", "O", "O", "O", "O"},
+  		{"O", "X", "O", "O", "O"},
+		{"O", "X", "X", "O", "O"},
+  		{"O", "X", "C", "O", "O"},
+  		{"O", "X", "X", "O", "O"},
+  		{"C", "O", "O", "O", "O"},
+	}
+
+	fmt.Println(graph.ClosestCarrot(carrotGrid, 1, 2)) //should return 4
 }
+
+
+
+
+
