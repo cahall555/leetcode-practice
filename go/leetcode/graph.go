@@ -73,6 +73,18 @@ var graphMap = map[string][]string{ //Acylic ajacency list
 	}
 
 	fmt.Println(graph.ClosestCarrot(carrotGrid, 1, 2)) //should return 4
+
+	println("Island Count")
+	var islandCount = [][]string{
+		{"W", "L", "W", "W", "W"},
+		{"W", "L", "W", "W", "W"},
+		{"W", "W", "W", "L", "W"},
+		{"W", "W", "L", "L", "W"},
+		{"L", "W", "W", "L", "L"},
+		{"L", "L", "W", "W", "W"},
+	}
+
+	fmt.Println(graph.IslandCount(islandCount))//should return 3
 }
 
 
