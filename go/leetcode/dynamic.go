@@ -19,4 +19,10 @@ func main() {
 	println("Tribonacci")
 	fmt.Println(dynamic.Tribonacci(25))
 
+	println("Max Palindrome")
+	s := "chartreusepugvicefree"
+	j := len(s) - 1
+	memo := make(map[string]int)
+	fmt.Println(dynamic.MaxPalindrome(s, 0, j, memo))
+
 }
