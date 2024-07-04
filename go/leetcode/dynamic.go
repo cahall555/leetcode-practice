@@ -24,5 +24,14 @@ func main() {
 	j := len(s) - 1
 	memo := make(map[string]int)
 	fmt.Println(dynamic.MaxPalindrome(s, 0, j, memo))
+	
+	println("Count Paths")
+	grid := [][]string{
+		{"O", "O", "X"},
+		{"O", "O", "O"},
+		{"O", "O", "O"},
+	}
 
+	memo = make(map[string]int)
+	fmt.Println(dynamic.CountPaths(grid, 0, 0, memo))
 }
