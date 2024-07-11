@@ -34,4 +34,9 @@ func main() {
 
 	memo = make(map[string]int)
 	fmt.Println(dynamic.CountPaths(grid, 0, 0, memo))
+
+	println("Array Stepper")
+	nums := []int{2, 3, 2, 0, 0, 1}
+	arrayMemo := make(map[int]int)
+	fmt.Println(dynamic.ArrayStepper(nums, 0, arrayMemo))
 }
