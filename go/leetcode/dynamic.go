@@ -39,4 +39,10 @@ func main() {
 	nums := []int{2, 3, 2, 0, 0, 1}
 	arrayMemo := make(map[int]int)
 	fmt.Println(dynamic.ArrayStepper(nums, 0, arrayMemo))
+
+
+	println("Can Concat")
+	words := []string{"one", "none", "is"}
+	memoConcat := make(map[string]bool)
+	fmt.Println(dynamic.CanConcat("noneisone", words, memoConcat))
 }
