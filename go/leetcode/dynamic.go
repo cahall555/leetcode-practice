@@ -45,4 +45,11 @@ func main() {
 	words := []string{"one", "none", "is"}
 	memoConcat := make(map[string]bool)
 	fmt.Println(dynamic.CanConcat("noneisone", words, memoConcat))
+
+	println("overlaping sequence")
+	s1 := "abcde"
+	s2 := "ace"
+	memoOverlap := make(map[string]int)
+	fmt.Println(dynamic.OverlapSequence(s1, s2, 0, 0, memoOverlap))
+
 }
